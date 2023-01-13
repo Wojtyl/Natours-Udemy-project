@@ -10,7 +10,7 @@ Kurs obejmował naukę zagadnień takich jak:
 - Architektura MVC
 - Szablony PUG
 
-Końcowa werjsa projektu możliwa do zobaczenia na https://wojtal-node-project.up.railway.app/tour/the-forest-hiker
+Końcowa werjsa projektu możliwa do zobaczenia na https://wojtal-node-project.up.railway.app
 
 ## ENG
 Project created during **Node.js, Express, MongoDB & More: The Complete Bootcamp 2023** course on Udemy.
@@ -23,4 +23,4 @@ Course included following topics:
 - MVC Architecture
 - PUG Templates
 
-Project final build available to see on https://wojtal-node-project.up.railway.app/tour/the-forest-hiker
+Project final build available to see on https://wojtal-node-project.up.railway.app
