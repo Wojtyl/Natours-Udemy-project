@@ -12,6 +12,12 @@ Kurs obejmował naukę zagadnień takich jak:
 
 Końcowa werjsa projektu możliwa do zobaczenia na https://wojtal-node-project.up.railway.app
 
+### Konto testowe: 
+
+Login: admin@natours.io
+
+Hasło: test1234
+
 ## ENG
 Project created during **Node.js, Express, MongoDB & More: The Complete Bootcamp 2023** course on Udemy.
 
@@ -24,3 +30,9 @@ Course included following topics:
 - PUG Templates
 
 Project final build available to see on https://wojtal-node-project.up.railway.app
+
+### Test account:
+
+Login: admin@natours.io
+
+Password: test1234
