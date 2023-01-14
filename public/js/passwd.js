@@ -10,7 +10,8 @@ export const updatePassword = async (
   try {
     const res = await axios({
       method: 'PATCH',
-      url: 'http://127.0.0.1:3000/api/v1/users/updatePassword',
+      // url: 'http://127.0.0.1:3000/api/v1/users/updatePassword',
+      url: '/api/v1/users/updatePassword',
       data: {
         password,
         newpassword,
