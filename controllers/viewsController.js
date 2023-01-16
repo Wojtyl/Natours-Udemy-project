@@ -1,6 +1,7 @@
 const Tour = require('./../models/tourModel');
 const User = require('./../models/userModel');
 const Booking = require('./../models/bookingModel');
+const Review = require('./../models/reviewModel');
 const catchAsync = require('./../utils/catchAsync');
 const AppError = require('../utils/appError');
 
@@ -41,6 +42,11 @@ exports.getLoginForm = catchAsync(async (req, res, next) => {
     title: 'Log in to your account',
   });
 });
+exports.getSignupForm = catchAsync(async (req, res, next) => {
+  res.status(200).render('signup', {
+    title: 'Sign Up to Natours!',
+  });
+});
 
 exports.getAccount = (req, res) => {
   res.status(200).render('account', {
@@ -51,13 +57,36 @@ exports.getAccount = (req, res) => {
 exports.getMyTours = catchAsync(async (req, res, next) => {
   // 1 Find all bookings
   const bookings = await Booking.find({ user: req.user.id });
-
   // 2 Find tours with the returned IDs
   const tourIDs = bookings.map((el) => el.tour);
   const tours = await Tour.find({ _id: { $in: tourIDs } });
 
   res.status(200).render('overview', {
     title: 'My tours',
+    tours,
+  });
+});
+
+exports.getMyReviews = catchAsync(async (req, res, next) => {
+  const reviews = await Review.find({ user: req.user.id });
+
+  const tourIDs = reviews.map((el) => el.tour);
+  const tours = await Tour.find({ _id: { $in: tourIDs } });
+
+  reviews.forEach((tour) => {
+    console.log('TourID: ', tour.tour);
+    tours.forEach((review) => {
+      console.log('Review tourID: ', review.id);
+      if (tour.tour === review.id) {
+        tour.review = review.review;
+      }
+    });
+  });
+
+  // console.log(tours);
+  res.status(200).render('my-reviews', {
+    title: 'My reviews',
+    reviews,
     tours,
   });
 });

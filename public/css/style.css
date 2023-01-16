@@ -704,6 +704,14 @@ body {
   -webkit-box-shadow: 1rem 0.5rem 3rem rgba(0, 0, 0, 0.15);
   box-shadow: 1rem 0.5rem 3rem rgba(0, 0, 0, 0.15);
 }
+
+.section-name-header {
+  padding: 2rem;
+  background-color: #55c57a;
+  color: #fff;
+  font-size: 4rem;
+  text-align: center;
+}
 .cta__img--logo {
   padding: 2rem;
   display: -webkit-box;
